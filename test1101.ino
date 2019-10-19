@@ -119,13 +119,13 @@ RPC_Response processSetGpioState(const RPC_Data &data)
     // To get index of the pin
     int j;
     for(j=0;j<18;j++){
-      if(esppin[j] == pin){
+      if(esppin[j].piin == pin){
         break;
         }
       }
 
      // setting strct status
-     esppin[j].status = active;
+     esppin[j].state = active;
     
 
     digitalWrite(pin, active);
